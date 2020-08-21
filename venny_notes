@@ -1,0 +1,42 @@
+cd home/username
+sudo add-apt-repository multiverse
+sudo dpkg --add-architecture i386
+sudo apt update
+sudo apt install lib32gcc1 steamcmd
+	
+sudo apt install 
+steamcmd
+login anonymous
+force_install_dir ./tfc/
+app_set_config 90 mod tfc
+app_update 90
+app_update 90
+app_update 90
+app_update 90
+app_update 90
+app_update 90
+app_update 90
+app_update 90
+app_update 90
+quit
+cd .steam/steamcmd/tfc/tfc
+nano steam_appid.txt - type in 90 
+ctrl + o
+enter
+ctrl + x
+nano server.cfg - copy server.cfg
+ctrl + o
+enter
+ctrl + x
+cd ~
+nano hlds_run.sh 
+
+#!/bin/bash
+cd /home/thuggum/.steam/steamcmd/tfc/
+screen -S ./hlds_run -game tfc -sys_ticrate 1100 -pingboost 3 +map 2fort +maxplayers 32
+
+ctrl + o
+enter
+ctrl + x
+
+chmod +x hlds_run.sh
